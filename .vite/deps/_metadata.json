@@ -1,0 +1,40 @@
+{
+  "hash": "6bd7ef74",
+  "configHash": "6201478c",
+  "lockfileHash": "b8ee5966",
+  "browserHash": "8bb09969",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d7d42732",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "dd7f4118",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "9f79f945",
+      "needsInterop": false
+    },
+    "@nextui-org/system": {
+      "src": "../../node_modules/@nextui-org/system/dist/index.mjs",
+      "file": "@nextui-org_system.js",
+      "fileHash": "2ffbd078",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-QPG7G3M7": {
+      "file": "chunk-QPG7G3M7.js"
+    },
+    "chunk-UTEJFLXC": {
+      "file": "chunk-UTEJFLXC.js"
+    }
+  }
+}
