@@ -28,6 +28,16 @@
     border: #252525 dashed 2px ;
     border-radius: 8px;
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 1s ease-in-out;
+}
+  
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 @media (max-width: 768px) {
     .S-series {
         gap: 5px;

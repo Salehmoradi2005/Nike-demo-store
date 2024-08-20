@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Image, Snippet , Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, RadioGroup, Radio} from "@nextui-org/react";
+import { Image, Snippet , Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Pagination} from "@nextui-org/react";
 import { FaCartPlus } from "react-icons/fa";
-
 import src from '../../public/index-poster.jpg'
 import DefaultLayout from "@/layouts/default";
 import { siteConfig } from "@/config/site";
@@ -9,6 +8,7 @@ import ProductCard from "@/components/ProductCard";
 import I1 from '../../public/air-jordan-1-low-mens-shoes-0LXhbn.png'
 import I2 from '../../public/air-jordan-1-mid-womens-shoes-FfLktz.png'
 import I3 from '../../public/air-jordan-6-retro-white-black-mens-shoes-Wk71GJ.png'
+import ScrollCont from "@/components/ScrollCont";
 import I4 from '../../public/air-max-2017-mens-shoes-BVqnkV.png'
 
 
@@ -86,7 +86,9 @@ export default function IndexPage() {
         <h1 className="text-2xl font-bold antialiased text-center mb-10">Best Air Sellers</h1>
         <section className="flex flex-wrap gap-5 items-center justify-center text-center sm:gap-10">
           {AirProduct.map((item) => (
-            <ProductCard Img={item.img} Tag={item.Tag} Price={item.price} BUTT={() => {ModalHandel(item)}}/>
+            <ScrollCont>
+              <ProductCard Img={item.img} Tag={item.Tag} Price={item.price} BUTT={() => {ModalHandel(item)}}/>
+            </ScrollCont>
           ))}
         </section>
 
@@ -104,12 +106,13 @@ export default function IndexPage() {
               </ModalHeader>
               <ModalBody >
                 <div className="flex-col w-full gap-5 justify-center S-cont ">
-                  <Image shadow='lg' src={Data.img} width={200}/>
+                  <Image shadow='lg' src={Data.img} />
                   <div>
                     <h1 className="font-bold text-2xl mb-4">{Data.Tag}</h1>
                     <p className="opacity-80 text-sm ">{Data.Ncolors}</p>
-                    <p className="opacity-80 text-sm ">{Data.Categories}</p>
-                    <p className="text-slate-500">{Data.Description}</p>
+                    <p className="opacity-80 text-sm mb-5">{Data.Categories}</p>
+                    <Pagination total={5} initialPage={8} variant="flat" color="warning"/>
+                    <p className="text-slate-500 mt-5">{Data.Description}</p>
                     <br />
                   </div>
                 </div>
