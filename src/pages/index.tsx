@@ -75,7 +75,7 @@ export default function IndexPage() {
             <span className="transition ease-in-out delay-50 cursor-pointer hover:opacity-50 hover:scale-90">{item.name}</span>
           ))}
         </div>
-        <section className="flex-col items-center justify-center gap-9 py-8 md:flex md:flex-row S-cont ">
+        <section className="flex-col items-center justify-center gap-9 py-8 md:flex md:flex-row S-cont fadeInEffect">
           <Image isZoomed src={src} width={300} shadow='md'/>
           <div className="flex flex-col gap-6 container antialiased justify-items-center items-center	place-items-center	text-center	w-80 ">
             <h1 className="text-5xl font-black antialiased">JUST DO IT</h1>
@@ -83,7 +83,7 @@ export default function IndexPage() {
             <Snippet variant="shadow" hideCopyButton={true} hideSymbol={true} >Best qulaity</Snippet>
           </div>
         </section>
-        <h1 className="text-2xl font-bold antialiased text-center mb-10">Best Air Sellers</h1>
+        <h1 className="text-2xl font-bold antialiased text-center mb-10 fadeInEffect">Best Air Sellers</h1>
         <section className="flex flex-wrap gap-5 items-center justify-center text-center sm:gap-10">
           {AirProduct.map((item) => (
             <ScrollCont>
@@ -111,7 +111,7 @@ export default function IndexPage() {
                     <h1 className="font-bold text-2xl mb-4">{Data.Tag}</h1>
                     <p className="opacity-80 text-sm ">{Data.Ncolors}</p>
                     <p className="opacity-80 text-sm mb-5">{Data.Categories}</p>
-                    <Pagination total={5} initialPage={8} variant="flat" color="warning"/>
+                    <Pagination total={5}   variant="flat" color="warning"/>
                     <p className="text-slate-500 mt-5">{Data.Description}</p>
                     <br />
                   </div>
