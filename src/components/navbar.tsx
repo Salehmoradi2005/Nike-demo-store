@@ -25,6 +25,8 @@ import {
 } from "@/components/icons";
 
 export const Navbar = () => {
+  const pathName = window.location.pathname 
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -64,10 +66,10 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <Link
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
+                  linkStyles({ color: pathName == `${item.href}` ? "primary" : "foreground"  }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
-                color="foreground"
+                color={"foreground"}
                 href={item.href}
               >
                 {item.label}
@@ -116,13 +118,7 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
+                color={pathName == `${item.href}` ? "primary" : "foreground"}
                 href={item.href}
                 size="lg"
               >
