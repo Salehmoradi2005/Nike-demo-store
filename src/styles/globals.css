@@ -52,6 +52,19 @@
 .S-footer {
     
 }
+
+.S-Item{
+    color: #5c5c5c;
+    width: 40px;
+    height: 40px;
+    background-color: #ececec;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#Label:checked ~ .S-Item {
+    background-color: #f5a524
+}
+
 .fadeInEffect {
     animation: FadeInEffect 1s ease-in-out;
 }

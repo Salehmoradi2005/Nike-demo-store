@@ -52,6 +52,16 @@ const AirProduct = [
 ]
 
 export default function IndexPage() {
+  let Sizes = [];
+  for (let index = 8; index <= 12; index++) {
+    Sizes.push(
+      <label>
+        <input type="radio" name="Size" defaultChecked={index == 8 ? true : false} value={index} hidden id="Label"/>
+        <div className="rounded-md shadow-md flex items-center justify-center font-semibold S-Item ">{index}</div>
+      </label>
+    )
+  }
+
   const [Data , setData] = useState({
     img : I1,
     price : 149 , 
@@ -111,7 +121,10 @@ export default function IndexPage() {
                     <h1 className="font-bold text-2xl mb-4">{Data.Tag}</h1>
                     <p className="opacity-80 text-sm ">{Data.Ncolors}</p>
                     <p className="opacity-80 text-sm mb-5">{Data.Categories}</p>
-                    <Pagination total={5}   variant="flat" color="warning"/>
+                    <div className="flex gap-2">
+                      <p className="font-bold mt-2 opacity-50">Size : </p>
+                      {Sizes}
+                    </div>
                     <p className="text-slate-500 mt-5">{Data.Description}</p>
                     <br />
                   </div>
@@ -122,8 +135,8 @@ export default function IndexPage() {
                 <Button color="default" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="default" variant="ghost" onPress={onClose}>
-                  <FaCartPlus /> Purchase
+                <Button color="warning" onPress={onClose}>
+                  <FaCartPlus /> Add to cart
                 </Button>
               </ModalFooter>
             </>
