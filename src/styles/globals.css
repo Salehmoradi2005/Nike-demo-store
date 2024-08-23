@@ -52,6 +52,20 @@
 .S-footer {
     
 }
+.S-footer-container > p {
+    color: #7e7e7e;
+    margin: 10px 0;
+    transition: all 0.2s ease-in-out;
+}
+.S-footer-container > p:hover {
+    filter: brightness(1.2);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.S-shadow{
+    margin-top: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.103);
+}
 
 .S-Item{
     color: #5c5c5c;

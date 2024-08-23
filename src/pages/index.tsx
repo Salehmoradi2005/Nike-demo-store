@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Image, Snippet , Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, Pagination} from "@nextui-org/react";
+import { Image, Snippet , Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
+import { message } from "antd";
 import { FaCartPlus } from "react-icons/fa";
 import src from '../../public/index-poster.jpg'
 import DefaultLayout from "@/layouts/default";
@@ -52,6 +53,26 @@ const AirProduct = [
 ]
 
 export default function IndexPage() {
+  const key = 'updatable';
+  const [messageAPI , contextHolder] = message.useMessage() 
+  const info = () => {
+    messageAPI.open({
+      key,
+      type: 'loading' ,
+      content : "Loading",
+      className: "h-50 scale-120"
+    })
+    setTimeout(() => {
+      messageAPI.open({
+        key,
+        type: 'success',
+        content: 'Added to cart',
+        duration: 2,
+        className: "h-50 scale-120"
+      });
+    }, 1000);
+  }
+
   let Sizes = [];
   for (let index = 8; index <= 12; index++) {
     Sizes.push(
@@ -79,6 +100,7 @@ export default function IndexPage() {
   return (
     <>
       <DefaultLayout>
+        {contextHolder}
         <h1 className="text-center text-2xl font-black mb-5">Series</h1>
         <div className="flex text-center justify-center gap-10 font-semibold flex-wrap mb-20 S-series">
           {siteConfig.ProductNames.map((item) => (
@@ -135,7 +157,10 @@ export default function IndexPage() {
                 <Button color="default" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="warning" onPress={onClose}>
+                <Button color="warning" onPress={() => {
+                  onClose() 
+                  info()
+                }}>
                   <FaCartPlus /> Add to cart
                 </Button>
               </ModalFooter>
