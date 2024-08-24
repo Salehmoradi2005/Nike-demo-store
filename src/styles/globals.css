@@ -52,6 +52,20 @@
 .S-footer {
 
 }
+.S-Color-slot {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(131, 131, 131, 0.97);
+    border-radius: 50px;
+    opacity: 60%;
+    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+#S-radio:checked ~ .S-Color-slot{
+    border: 2px solid #f5a524;
+    transform: scale(1.1);
+    opacity: 100%;
+}
 .S-icon-hover:hover {
     filter: brightness(1.2);
 }

@@ -3,15 +3,11 @@ import { IoIosGlobe } from "react-icons/io";
 import { Navbar } from "@/components/navbar";
 import {FaInstagram , FaTelegram , FaTwitter , FaLinkedin} from 'react-icons/fa'
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DefaultLayout({ children }: {children: React.ReactNode}) {
   return (
     <div className="relative flex flex-col h-screen">
       <Navbar />
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
+      <main className={`container mx-auto max-w-7xl px-6 flex-grow pt-16 `}>
         {children}
       </main>
       <footer className=" flex flex-col  justify-left px-16 py-3 S-footer  sm:px-40 sm:justify-center S-shadow">
