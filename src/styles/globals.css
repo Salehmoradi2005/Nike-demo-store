@@ -50,7 +50,13 @@
     }
 }
 .S-footer {
-    
+
+}
+.S-icon-hover:hover {
+    filter: brightness(1.2);
+}
+.S-icon-hover:active {
+    transform: scale(0.8);
 }
 .S-footer-container > p {
     color: #7e7e7e;
