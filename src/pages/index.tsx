@@ -11,6 +11,7 @@ import I2 from '../../public/air-jordan-1-mid-womens-shoes-FfLktz.png'
 import I3 from '../../public/air-jordan-6-retro-white-black-mens-shoes-Wk71GJ.png'
 import ScrollCont from "@/components/ScrollCont";
 import I4 from '../../public/air-max-2017-mens-shoes-BVqnkV.png'
+import Colors from "@/components/Colors";
 
 
 const AirProduct = [
@@ -133,20 +134,25 @@ export default function IndexPage() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader className="flex flex-col gap-1 ">
                 {Data.Tag}
               </ModalHeader>
               <ModalBody >
                 <div className="flex-col w-full gap-5 justify-center S-cont ">
-                  <Image shadow='lg' src={Data.img} />
+                  <Image shadow='sm' src={Data.img} />
                   <div>
                     <h1 className="font-bold text-2xl mb-4">{Data.Tag}</h1>
-                    <p className="opacity-80 text-sm ">{Data.Ncolors}</p>
                     <p className="opacity-80 text-sm mb-5">{Data.Categories}</p>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 mb-5">
                       <p className="font-bold mt-2 opacity-50">Size : </p>
                       {Sizes}
                     </div>
+
+                    <div className="flex gap-2">
+                      <p className="font-bold mt-2 opacity-50">Color : </p>
+                      <Colors count={3}/>
+                    </div>
+
                     <p className="text-slate-500 mt-5">{Data.Description}</p>
                     <br />
                   </div>
