@@ -117,7 +117,7 @@ export default function IndexPage() {
           </div>
         </section>
         <h1 className="text-2xl font-bold antialiased text-center mb-10 fadeInEffect">Best Air Sellers</h1>
-        <section className="flex flex-wrap gap-5 items-center justify-center text-center sm:gap-10">
+        <section className="flex flex-wrap gap-5 items-center justify-center cus-cont text-center sm:gap-10">
           {AirProduct.map((item) => (
             <ScrollCont>
               <ProductCard Img={item.img} Tag={item.Tag} Price={item.price} BUTT={() => {ModalHandel(item)}}/>
@@ -129,6 +129,7 @@ export default function IndexPage() {
         radius="md"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
+        backdrop="blur"
         scrollBehavior="inside"
       >
         <ModalContent>
@@ -159,16 +160,17 @@ export default function IndexPage() {
                 </div>
               </ModalBody>
               <ModalFooter>
-                <h2 className="flex justify-center font-bold text-center w-1/3 items-center m-auto ">{Data.price}$</h2>
-                <Button color="default" variant="light" onPress={onClose}>
-                  Close
-                </Button>
                 <Button color="warning" onPress={() => {
                   onClose() 
                   info()
                 }}>
-                  <FaCartPlus /> Add to cart
+                  <FaCartPlus size={20}/> Add to cart
                 </Button>
+                <Button color="default" variant="flat" onPress={onClose}>
+                  Close
+                </Button>
+
+                <h2 className="flex justify-center font-bold text-center w-1/3 items-center m-auto border rounded-lg p-2">{Data.price}$</h2>
               </ModalFooter>
             </>
           )}

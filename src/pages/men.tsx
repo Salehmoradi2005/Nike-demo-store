@@ -1,8 +1,9 @@
-import DefaultLayout from "@/layouts/default";
+ import DefaultLayout from "@/layouts/default";
 import React from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { ArrowUpOutlined,CiCircleFilled, MailOutlined, SettingOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
+import IMG from '../../public/air-jordan-1-mid-womens-shoes-FfLktz.png'
 import Product from "@/components/Product";
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -10,34 +11,22 @@ const items: MenuItem[] = [
   {
     key: 'sub1',
     label: 'size',
-    icon: <MailOutlined />,
+    icon: <ArrowUpOutlined />,
     children: [
-      {
-        key: 'g1',
-        label: 'Item 1',
-        type: 'group',
-        children: [
-          { key: '1', label: 'Option 1' },
-          { key: '2', label: 'Option 2' },
-        ],
-      },
-      {
-        key: 'g2',
-        label: 'Item 2',
-        type: 'group',
-        children: [
-          { key: '3', label: 'Option 3' },
-          { key: '4', label: 'Option 4' },
-        ],
-      },
+          { key: '1', label: '8' },
+          { key: '2', label: '9' },
+          { key: '3', label: '10' },
+          { key: '4', label: '11' },
+          { key: '5', label: '12' },
+          ,
     ],
   },
   {
     key: 'sub2',
-    label: 'Navigation Two',
-    icon: <AppstoreOutlined />,
+    label: 'Color',
+    icon: <CiCircleFilled />,
     children: [
-      { key: '5', label: 'Option 5' },
+      { key: '5', label: 'Option 5' ,className: "text-yellow-500"},
       { key: '6', label: 'Option 6' },
       {
         key: 'sub3',
@@ -77,25 +66,47 @@ const items: MenuItem[] = [
 export default function DocsPage() {
   return (
     <DefaultLayout >
-      <div className="flex-row  sm:flex w-full sm:gap-2 relative h-screen justify-center">
-        <div className="w-1/3 h-max  flex justify-center m-auto sm:sticky" style={{position:'-webkit-sticky' , top : 80
+      <div className="flex-row  sm:flex w-full sm:gap-2 relative h-auto justify-center">
+
+
+
+        <div className="w-1/3 h-max flex justify-center mt-10 sm:sticky" style={{position:'-webkit-sticky' , top : 80
         }}>
           <Menu
-            onClick={() => alert("hi")}
+          className="sm:block hidden"
+            
             style={{ width: 256 }}
             defaultSelectedKeys={['1']}
             mode="inline"
             items={items}
           />
         </div>
-        <div className="w-full h-full bg-gray-500 flex flex-wrap justify-left gap-2 overflow-auto">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+
+
+
+
+        <div className="w-full h-max flex flex-wrap justify-left gap-2 ">
+          <Product  img={IMG} name="Air Jordan max" price={"200"} rating={"4"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product img={IMG} name="Air Jordan max" price={"200"} />
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product img={IMG} name="Air Jordan max" price={"200"} />
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product img={IMG} name="Air Jordan max" price={"200"} />
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product  img={IMG} name="Air Jordan max" price={"200"}/>
+          <Product img={IMG} name="Air Jordan max" price={"200"} />
         </div>
       </div>
     </DefaultLayout>

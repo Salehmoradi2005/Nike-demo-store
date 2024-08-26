@@ -17,12 +17,12 @@ export default function ProductCard({Price , Img , Tag , BUTT = {}}) {
             <Card
                 isFooterBlurred
                 radius="lg"
-                className="border-none relative">
+                className="border-none relative S-temp">
                     <Skeleton isLoaded={Load}>
                         <h1 className="absolute z-20 font-bold text-center w-full mt-2 " style={{color: '#25252595'}}>{Tag}</h1>
                     <Image
                         alt="Woman listing to music"
-                        className="object-cover"
+                        className="object-cover "
                         height={200}
                         src={Img}
                         width={200}
