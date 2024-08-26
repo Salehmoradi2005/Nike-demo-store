@@ -1,7 +1,6 @@
 import IMG from "../../public/nike.ico";
-import { IoIosGlobe } from "react-icons/io";
+
 import { Navbar } from "@/components/navbar";
-import {FaInstagram , FaTelegram , FaTwitter , FaLinkedin} from 'react-icons/fa'
 
 export default function DefaultLayout({
   children,
@@ -14,7 +13,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
       </main>
-      <footer className=" flex flex-col  justify-left px-16 py-3 S-footer  sm:px-40 sm:justify-center S-shadow">
+      <footer className="w-full flex flex-col  justify-left px-16 py-3 S-footer  sm:px-40 sm:justify-center S-shadow">
         <img src={IMG} className="sm:hidden" width={60} />
         <div className="w-100 flex flex-col justify-center py-3 S-footer justify-left gap-10 sm:flex-row sm:gap-40 ">
         <div className="S-footer-container">
@@ -44,18 +43,6 @@ export default function DefaultLayout({
           <p className="font-semibold ">Yoga</p>
           <p className="font-semibold ">NikeLab</p>
         </div>
-        </div>
-        <div className="flex gap-5 my-10 text-3xl text-gray-500 md:mx-64 ">
-          <FaInstagram className="S-icon-hover transition-all"/>
-          <FaLinkedin className="S-icon-hover transition-all"/>
-          <FaTwitter className="S-icon-hover transition-all"/>
-          <FaTelegram className="S-icon-hover transition-all"/>
-        </div>
-        <h1 className="md:mx-64 md:text-xl flex items-center gap-2 text-gray-400 font-medium "><IoIosGlobe size={30}/> United State of America</h1>
-        <div className="mt-5">
-          <h1 className="md:mx-64 md:text-xl flex items-center gap-2 text-gray-400 font-medium "> About us</h1>
-          <h1 className="md:mx-64 md:text-xl flex items-center gap-2 text-gray-400 font-medium "> Contact Us</h1>
-          <h1 className="md:mx-64 md:text-xl flex items-center gap-2 text-gray-400 font-medium "> Copyright© 2024</h1>
         </div>
       </footer>
     </div>
