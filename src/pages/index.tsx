@@ -94,7 +94,7 @@ export default function IndexPage() {
   })
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
-  function ModalHandel(IN) {
+  function ModalHandel(IN:any) {
     setData(IN)
     onOpen()
   }
@@ -124,12 +124,62 @@ export default function IndexPage() {
             </ScrollCont>
           ))}
         </section>
+          <ScrollCont>
+              <div className="w-full m-auto flex flex-col justify-center text-center mt-10 ">
+              <h1 className="text-3xl font-black">WINNING HITS <br />DIFFERENT</h1>
+              <p className="mt-2 ">
+                Icons built for the bright lights, on and off the court
+              </p>
+              <Button  variant="faded" color="default" className=" font-black w-20 m-auto mt-2 "> Shop</Button>
+               </div>
+          </ScrollCont>
+        <section className="flex my-10 flex-wrap sm:flex-row w-full items-center justify-center">
+          <ScrollCont>
+            <div style={{backgroundImage: 'url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_500,c_limit/e69f9470-d640-41f7-9ce9-965ec1dd4e3b/nike-just-do-it.jpg")'}} className="w-1/2 h-96 p-5 temp2">
+              <div className="temp ">
+                <h1 className="text-lg text-white">Redefine Your Rotation</h1>
+                <h1 className="text-3xl text-white mb-5">Air Force 1 & More</h1>
+                <Button color="warning" variant="shadow" className="font-bold ">Shop</Button>
+              </div>
+            </div>
+          </ScrollCont>
+
+          <ScrollCont>
+            <div style={{backgroundImage: 'url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_537,c_limit/c35be17e-16c7-42a0-a03d-8d71b1e996eb/nike-just-do-it.jpg")'}} className="w-1/2 h-96 p-5 temp2">
+              <div className="temp ">
+                <h1 className="text-lg text-white">School Essentials</h1>
+                <h1 className="text-3xl text-white mb-5">Gears to Win the Year</h1>
+                <Button color="warning" variant="shadow" className="font-bold ">Shop</Button>
+              </div>
+            </div>
+          </ScrollCont>
+
+          <ScrollCont>
+            <div style={{backgroundImage: 'url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_537,c_limit/12a5faaf-57c5-4dbf-bbbb-f79cbd71676e/nike-just-do-it.jpg")'}} className="w-1/2 h-96 p-5 temp2">
+              <div className="temp ">
+                <h1 className="text-lg text-white">Distant Gratification</h1>
+                <h1 className="text-3xl text-white mb-5">Nike Pegasus Trail 5 GTX</h1>
+                <Button color="warning" variant="shadow" className="font-bold ">Shop</Button>
+              </div>
+            </div>
+          </ScrollCont>
+
+          <ScrollCont>
+            <div style={{backgroundImage: 'url("https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_537,c_limit/c3c6a408-54fd-48a1-9d5b-4f952c8709ff/nike-just-do-it.jpg")'}} className="w-1/2 h-96 p-5 temp2">
+              <div className="temp ">
+                <h1 className="text-lg text-white">New for Soccer</h1>
+                <h1 className="text-3xl text-white mb-5">Mad Ambition Pack</h1>
+                <Button color="warning" variant="shadow" className="font-bold ">Shop</Button>
+              </div>
+            </div>
+          </ScrollCont>
+        </section>
 
         <Modal
         radius="md"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        backdrop="blur"
+        backdrop="opaque"
         scrollBehavior="inside"
       >
         <ModalContent>

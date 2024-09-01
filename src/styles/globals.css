@@ -58,14 +58,66 @@
     margin-right: 10px;
     margin-bottom: 5px;
 }
+.S-chip {
+    display: flex;
+    color: rgb(190, 190, 190);
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    width: 100px;
+    gap: 5px;
+    font-weight: 600;
+    height: 30px;
+    text-align: center;
+    border: 1px #2525256b solid;
+    background-color: #25252500;
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+}
+#chip:checked ~ .S-chip {
+    color: #252525;
+    border: none;
+    background-color: #f5a524;
+}
+.S-temp2 {
+    min-width: 89vw;
+    scrollbar-width: 0;
+    scrollbar-gutter: 0;
+}
+.S-temp-3 {
+    overflow: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.S-temp-3::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+.S-demo-cont{
+    max-width: 300px;
+    max-height: max-content;
+}
+.temp2{
+    width: calc(500px + 5vw);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+}
+.temp{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+}
 @media (max-width: 768px) {
+    .temp2{
+        width: 90vw;
+        background-size: 100% ;
+    }
     .S-product-cont{
         display: flex;
         padding: 5px;
         border-radius: 5px;
     }
     .S-button {
-        margin-right: -30px;
+        margin-right: 5pxpx;
     }
     .S-product-cont > img{
         width: 40%;

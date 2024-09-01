@@ -2,6 +2,7 @@ import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
+import { Badge } from "@nextui-org/react";
 import {
   Navbar as NextUINavbar,
   NavbarBrand,
@@ -17,6 +18,7 @@ import clsx from "clsx";
 import IMG from "../../public/nike.ico";
 
 import { siteConfig } from "@/config/site";
+import { FaCartShopping } from "react-icons/fa6";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
   TwitterIcon,
@@ -87,6 +89,11 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
           </Link>
+          <Link >
+            <Badge content=""  color="warning" variant="solid">
+              <FaCartShopping size={20} className="text-default-500" />
+            </Badge>
+          </Link>
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
@@ -108,6 +115,11 @@ export const Navbar = () => {
         <Link isExternal href={siteConfig.links.twitter}>
           <TwitterIcon className="text-default-500" />
         </Link>
+        <Link >
+          <Badge content=""  color="warning" variant="solid">
+            <FaCartShopping size={20} className="text-default-500" />
+          </Badge>
+        </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
@@ -124,6 +136,7 @@ export const Navbar = () => {
               >
                 {item.label}
               </Link>
+
             </NavbarMenuItem>
           ))}
         </div>
