@@ -5,7 +5,7 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export default function ProductCard({Price , Img , Tag , BUTT = {}}) {
+export default function ProductCard({Price , Img , Tag , BUTT = {} , shadow}) {
     const [Load , SetLoad] = useState(false)
     async function example() {
         await delay(2000);
@@ -15,8 +15,9 @@ export default function ProductCard({Price , Img , Tag , BUTT = {}}) {
     return(
         <>
             <Card
+                shadow={shadow}
                 isFooterBlurred
-                radius="lg"
+                radius="md"
                 className="border-none relative S-temp">
                     <Skeleton isLoaded={Load}>
                         <h1 className="absolute z-20 font-bold text-center w-full mt-2 " style={{color: '#25252595'}}>{Tag}</h1>

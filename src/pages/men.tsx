@@ -4,6 +4,7 @@ import { ArrowUpOutlined,CiCircleFilled, DollarCircleFilled ,StarFilled, Setting
 import type { MenuProps } from 'antd';
 import { Image , Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 import { Menu } from 'antd';
+import {ScrollShadow} from "@nextui-org/react";
 import IMG from '../../public/air-jordan-1-mid-womens-shoes-FfLktz.png'
 import Product from "@/components/Product";
 import { BsSkipStartFill } from "react-icons/bs";
@@ -15,9 +16,9 @@ import ScrollCont from "@/components/ScrollCont";
 import { siteConfig, SiteConfig } from "@/config/site";
 import ProductCard from "@/components/ProductCard";
 
-const Products = siteConfig.Products
 
-Products.sort((item) => { return item.Price})
+
+
 
 const items: MenuItem[] = [
   {
@@ -76,10 +77,14 @@ const items: MenuItem[] = [
 ];
 
 export default function DocsPage() {
+  const PopProduct = siteConfig.Products.filter((item) => item.Rating > 4.2)
+
+  const [Products , SetProducts] = useState(siteConfig.Products)
   const [ProductHandler , SetProductHandler] = useState(Products)
 
+
   const key = 'updatable';
-  const [messageAPI , contextHolder] = message.useMessage() 
+  const [messageAPI , contextHolder] = message.useMessage();
   const info = () => {
     messageAPI.open({
       key,
@@ -120,14 +125,22 @@ export default function DocsPage() {
   })
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
-  function ModalHandel(IN) {
+  function ModalHandel(IN:any) {
     setData(IN)
     onOpen()
   }
   return (
     <DefaultLayout >
       {contextHolder}
-      <h1 className="text-center text-2xl font-bold mb-20">Men shoes</h1>
+      <h1 className="text-center text-2xl font-bold mb-2">Most Seller</h1>
+      <ScrollShadow orientation="horizontal" className="flex gap-5" >
+      {PopProduct.map((item) => (
+            <ScrollCont >
+              <ProductCard shadow='none' Img={item.Img} Tag={item.Tag} Price={item.Price} BUTT={() => {ModalHandel(item)}}/>
+            </ScrollCont>
+          ))}
+      </ScrollShadow>
+      <h1 className="text-center text-2xl font-bold mt-10 mb-5">Men shoes</h1>
       <div className="flex-row  sm:flex w-full sm:gap-2 relative h-auto justify-center">
 
 
@@ -151,15 +164,15 @@ export default function DocsPage() {
             </div>
            <div className="flex gap-2 overflow-scroll S-temp-3">
             <label>
-                <input type="radio" hidden id="chip" name="filter" />
+                <input  type="radio" hidden id="chip" name="filter"  value="1"/>
                 <div className="S-chip"><DollarCircleFilled /> Price-L</div>
               </label>
               <label>
-                <input type="radio" hidden id="chip" name="filter"/>
+                <input  type="radio" hidden id="chip" name="filter" value="2"/>
                 <div className="S-chip"><DollarCircleFilled /> Price-H</div>
               </label>
               <label>
-                <input type="radio" hidden id="chip" name="filter"/>
+                <input type="radio" hidden id="chip" name="filter" value="3"/>
                 <div className="S-chip"><StarFilled /> Rating</div>
               </label>
 

@@ -192,5 +192,65 @@ export const siteConfig = {
       Rating: 4,
       Key: 8
     }),
+
+    new Product({
+      Tag : 'Nike Air Max 270',
+      Img : 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/awjogtdnqxniqqk0wpgf/AIR+MAX+270.png' ,
+      Price : 160,
+      Description: "Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colors.",
+      Category: 'Men',
+      Rating: 4,
+      Key: 9
+    }),
+    
+    new Product({
+      Tag : 'Nike Pegasus Plus',
+      Img : 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/7621d804-5e9b-4166-a074-1c1712006a1f/PEGASUS+PLUS.png' ,
+      Price : 180,
+      Description: "Take responsive cushioning to the next level with the Pegasus Plus. It energizes your ride with full-length, superlight ZoomX foam to give you a high level of energy return for everyday runs. And a stretchy Flyknit upper conforms to your foot for a seamless fit.",
+      Category: 'Men',
+      Rating: 4,
+      Key: 10
+    }),
+
+    new Product({
+      Tag : 'Nike Court Legacy',
+      Img : 'https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/ece27fc1-1c28-43b2-ae8e-fb39db26c71c/NIKE+COURT+LEGACY+NN.png' ,
+      Price : 135,
+      Description: "Honoring a history rooted in tennis culture, the Nike Court Legacy brings you a time-tested staple. Its pebbled upper, heritage stitching and retro Swoosh design let you blend sport and fashion. And, you get to do good by looking good.",
+      Category: 'Men',
+      Rating: 4,
+      Key: 11
+    }),
+
+    new Product({
+      Tag : 'Jordan Spizike Low',
+      Img : "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d99a1c5d-3b21-4e45-97c4-7aa85562b158/JORDAN+SPIZIKE+LOW.png" ,
+      Price : 160,
+      Description: "The Spizike takes elements of five classic Jordans, combines them, and gives you one iconic sneaker. It's an homage to Spike Lee formally introducing Hollywood and hoops in a culture moment. You get a great looking pair of kicks with some history. What more can you ask for? Ya dig?",
+      Category: 'Men',
+      Rating: 4,
+      Key: 12
+    }),
+
+    new Product({
+      Tag : 'Sabrina 2 "Mirrored',
+      Img : "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/9d83f347-7342-4284-ac39-b511b9984f53/SABRINA+2.png" ,
+      Price : 130,
+      Description: "Sabrina Ionescu’s success is no secret. Her game is based on living in the gym, getting in rep after rep to perfect her craft. The Sabrina 2 sets you up to do more, so you're ready to go when it's game-time. Our newest Cushlon foam helps keep you fresh, Air Zoom cushioning adds the pop, and sticky traction helps you create that next-level distance. Sabrina’s handed you the tools. Time to go to work.",
+      Category: 'Men',
+      Rating: 4,
+      Key: 13
+    }),
+
+    new Product({
+      Tag : 'Nike Zoom Vomero 5',
+      Img : "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/305a75c4-b498-4d8c-a52d-0781dac1c0af/NIKE+ZOOM+VOMERO+5.png" ,
+      Price : 160,
+      Description: "The Vomero 5 takes early 2000s running to modern heights. A combination of breathable and durable materials stands ready for the rigors of your day, while Zoom Air cushioning delivers a smooth ride.",
+      Category: 'Men',
+      Rating: 4,
+      Key: 14
+    }),
   ]
 };

@@ -8,7 +8,7 @@ export default function Colors({count}) {
         Labels.push(
             <label>
                 <input type="radio" name="color" id="S-radio" hidden/>
-                <div className="S-Color-slot" style={{
+                <div className="S-Color-slot flex item-center justify-center" style={{
                     background: `${Colors[index]}`
                 }}></div>
             </label>
@@ -16,7 +16,7 @@ export default function Colors({count}) {
         
     }
     return(  
-        <div className="flex gap-2 ">
+        <div className="flex gap-2 items-center">
             {Labels}
         </div>
     )

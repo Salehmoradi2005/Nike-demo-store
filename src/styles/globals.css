@@ -146,13 +146,16 @@
 .S-footer {
 
 }
+.NONESENSE {
+    background-color: #2e1f29;
+}
 .S-Color-slot {
     width: 30px;
     height: 30px;
-    border: 2px solid rgba(131, 131, 131, 0.97);
-    border-radius: 50px;
-    opacity: 60%;
-    box-shadow: 0 5px 10px rgb(0, 0, 0);
+    border: 2px solid rgba(131, 131, 131, 0.11);
+    border-radius: 5px;
+    opacity: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.121);
     transition: all 0.2s ease-in-out;
 }
 #S-radio:checked ~ .S-Color-slot{

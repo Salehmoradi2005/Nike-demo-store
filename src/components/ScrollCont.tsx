@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ScrollCont = ({ children }) => {
+const ScrollCont = ({ children  }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -23,7 +23,7 @@ const ScrollCont = ({ children }) => {
   }, []);
 
   return (
-    <div ref={ref} className={`fade-in ${isVisible ? 'visible' : ''}`}>
+    <div ref={ref} className={`fade-in ${isVisible ? 'visible' : ''} `} >
       {children}
     </div>
   );
