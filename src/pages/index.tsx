@@ -176,6 +176,7 @@ export default function IndexPage() {
         </section>
 
         <Modal
+        size="sm"
         radius="md"
         isOpen={isOpen}
         onOpenChange={onOpenChange}

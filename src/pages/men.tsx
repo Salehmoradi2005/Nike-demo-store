@@ -82,7 +82,6 @@ export default function DocsPage() {
   const [Products , SetProducts] = useState(siteConfig.Products)
   const [ProductHandler , SetProductHandler] = useState(Products)
 
-
   const key = 'updatable';
   const [messageAPI , contextHolder] = message.useMessage();
   const info = () => {
@@ -195,6 +194,7 @@ export default function DocsPage() {
 
 
       <Modal
+        size="sm"
         radius="md"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
