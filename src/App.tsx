@@ -1,18 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 
 import IndexPage from "@/pages/index";
-import DocsPage from "@/pages/men";
-import PricingPage from "@/pages/pricing";
 import BlogPage from "@/pages/blog";
 import AboutPage from "@/pages/about";
 import NotFound from "./pages/notfound";
+import Women from "./pages/women";
+import Men from "./pages/men";
 
 function App() {
   return (
     <Routes>
       <Route element={<IndexPage />} path="/" />
-      <Route element={<DocsPage />} path="/men" />
-      <Route element={<PricingPage />} path="/women" />
+      <Route element={<Men />} path="/men" />
+      <Route element={<Women />} path="/women" />
       <Route element={<BlogPage />} path="/sale" />
       <Route element={<AboutPage />} path="/jordan" />
       <Route element={<NotFound />} path="*" />

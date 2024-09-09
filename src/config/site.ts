@@ -252,5 +252,36 @@ export const siteConfig = {
       Rating: 4,
       Key: 14
     }),
+    
+    new Product({
+      Tag : 'Nike P-6000 Premium',
+      Img : "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/58d11f08-017c-4d26-9fce-23844d304fcd/W+NIKE+P-6000+PRM.png" ,
+      Price : 120,
+      Description: "A mash-up of past Pegasus sneakers, the P-6000 takes early 2000s running to modern heights. Featuring airy mesh and sporty lines, it's the perfect mix of head-turning looks and breathable comfort. Plus, its foam cushioning adds a lifted, track-inspired stance and unbelievable cushioning.",
+      Category: 'Women',
+      Rating: 4.2,
+      Key: 15
+    }),
+    
+    new Product({
+      Tag : 'Air Jordan 1 Low OG',
+      Img : "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/58f5a602-34fa-42bc-be53-5c33d4fe4153/WMNS+AIR+JORDAN+1+RETRO+LOW+OG.png" ,
+      Price : 140,
+      Description: "Step into greatness with the Air Jordan 1 Low OG. Updated color and texture gives the all-time favorite fresh identity while staying true to the original design.",
+      Category: 'Women',
+      Rating: 4.6,
+      Key: 16
+    }),
+
+        
+    new Product({
+      Tag : 'Nike P-6000 Premium',
+      Img : "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/58d11f08-017c-4d26-9fce-23844d304fcd/W+NIKE+P-6000+PRM.png" ,
+      Price : 120,
+      Description: "A mash-up of past Pegasus sneakers, the P-6000 takes early 2000s running to modern heights. Featuring airy mesh and sporty lines, it's the perfect mix of head-turning looks and breathable comfort. Plus, its foam cushioning adds a lifted, track-inspired stance and unbelievable cushioning.",
+      Category: 'Women',
+      Rating: 4.2,
+      Key: 17
+    }),
   ]
 };

@@ -1,4 +1,4 @@
- import DefaultLayout from "@/layouts/default";
+import DefaultLayout from "@/layouts/default";
 import React, { useState } from 'react';
 import { ArrowUpOutlined,CiCircleFilled, DollarCircleFilled ,StarFilled, SettingOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
@@ -76,10 +76,10 @@ const items: MenuItem[] = [
   },
 ];
 
-export default function Men() {
-  const PopProduct = siteConfig.Products.filter((item) => item.Rating > 3.8)
+export default function Women() {
+  const PopProduct = siteConfig.Products.filter((item) => item.Rating > 3.8 && item.Category == "Women")
 
-  const [Products , SetProducts] = useState(siteConfig.Products.filter((i) => i.Category == 'Men'))
+  const [Products , SetProducts] = useState(siteConfig.Products.filter((i) => i.Category == 'Women'))
   const [ProductHandler , SetProductHandler] = useState(Products)
 
   const key = 'updatable';

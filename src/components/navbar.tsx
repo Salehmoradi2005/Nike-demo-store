@@ -67,6 +67,7 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
+                isDisabled={item.label == 'Sale' || item.label == 'News' ? true : false}
                 className={clsx(
                   linkStyles({ color: pathName == `${item.href}` ? "primary" : "foreground"  }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
@@ -130,6 +131,9 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
+                isDisabled={
+                  item.label == 'Sale' || item.label == 'News' || item.label == 'Jordan' || item.label == 'Discounts'
+                }
                 color={pathName == `${item.href}` ? "primary" : "foreground"}
                 href={item.href}
                 size="lg"
