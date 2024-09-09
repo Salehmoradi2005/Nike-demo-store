@@ -120,7 +120,7 @@ export default function IndexPage() {
         <section className="flex flex-wrap gap-5 items-center justify-center cus-cont text-center sm:gap-10">
           {AirProduct.map((item) => (
             <ScrollCont>
-              <ProductCard Img={item.img} Tag={item.Tag} Price={item.price} BUTT={() => {ModalHandel(item)}}/>
+              <ProductCard shadow="" Img={item.img} Tag={item.Tag} Price={item.price} BUTT={() => {ModalHandel(item)}}/>
             </ScrollCont>
           ))}
         </section>

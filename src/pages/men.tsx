@@ -77,7 +77,7 @@ const items: MenuItem[] = [
 ];
 
 export default function DocsPage() {
-  const PopProduct = siteConfig.Products.filter((item) => item.Rating > 4.2)
+  const PopProduct = siteConfig.Products.filter((item) => item.Rating > 3.8)
 
   const [Products , SetProducts] = useState(siteConfig.Products)
   const [ProductHandler , SetProductHandler] = useState(Products)
@@ -131,8 +131,8 @@ export default function DocsPage() {
   return (
     <DefaultLayout >
       {contextHolder}
-      <h1 className="text-center text-2xl font-bold mb-2">Most Seller</h1>
-      <ScrollShadow orientation="horizontal" className="flex gap-5" >
+      <h1 className="text-center text-2xl font-bold mb-2">Best Seller</h1>
+      <ScrollShadow orientation="horizontal" className="flex gap-5 w-auto S-M-off"  >
       {PopProduct.map((item) => (
             <ScrollCont >
               <ProductCard shadow='none' Img={item.Img} Tag={item.Tag} Price={item.Price} BUTT={() => {ModalHandel(item)}}/>

@@ -93,7 +93,8 @@
     display: none; /* Safari and Chrome */
   }
 .S-demo-cont{
-    max-width: 300px;
+    width: 300px;
+    max-width: 300px; 
     max-height: max-content;
 }
 .temp2{
@@ -105,6 +106,9 @@
     position: absolute;
     bottom: 0;
     margin-bottom: 30px;
+}
+.S-temp {
+    width: 180px;
 }
 @media (max-width: 768px) {
     .temp2{
@@ -143,9 +147,7 @@
         border-radius: 20px;
     }
 }
-.S-footer {
 
-}
 .NONESENSE {
     background-color: #2e1f29;
 }
