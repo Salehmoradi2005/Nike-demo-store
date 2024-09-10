@@ -125,6 +125,8 @@
     }
     .S-product-cont > img{
         width: 40%;
+        transform: scale(1.1);
+        margin-right: 5px;
         border-radius: 5px;
     }
     .cus-cont{

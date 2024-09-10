@@ -139,23 +139,12 @@ export default function Women() {
             </ScrollCont>
           ))}
       </ScrollShadow>
-      <h1 className="text-center text-2xl font-bold mt-10 mb-5">Men shoes</h1>
+      <h1 className="text-center text-2xl font-bold mt-10 mb-5">en shoes</h1>
       <div className="flex-row  sm:flex w-full sm:gap-2 relative h-auto justify-center">
 
 
 
-        <div className="w-1/4 flex">
-          <div className="w-full h-max flex justify-center mt-5 sm:sticky" style={{position:'-webkit-sticky' , top : 80
-        }}>
-            <Menu
-            className="md:block hidden"
-            defaultOpenKeys={['sub1' , 'sub2' ,'sub4']}
-              style={{ width: 512 }}
-              defaultSelectedKeys={['1']}
-              mode="inline"
-              items={items}
-            />
-          </div>
+        <div className="w-0 flex">
 
           <div className=" flex gap-2 sm:hidden S-temp2 mb-5" >
             <div className="text-lg font-semibold text-gray-600">
