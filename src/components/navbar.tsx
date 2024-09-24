@@ -90,7 +90,7 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.twitter}>
             <TwitterIcon className="text-default-500" />
           </Link>
-          <Link >
+          <Link href="/cart">
             <Badge content=""  color="warning" variant="solid">
               <FaCartShopping size={20} className="text-default-500" />
             </Badge>
@@ -116,7 +116,7 @@ export const Navbar = () => {
         <Link isExternal href={siteConfig.links.twitter}>
           <TwitterIcon className="text-default-500" />
         </Link>
-        <Link >
+        <Link href="/cart">
           <Badge content=""  color="warning" variant="solid">
             <FaCartShopping size={20} className="text-default-500" />
           </Badge>
