@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import  { useEffect, useRef, useState } from 'react';
 
 const ScrollCont = ({ children  }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef(undefined);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

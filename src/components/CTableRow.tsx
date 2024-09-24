@@ -1,4 +1,4 @@
-import {TableRow, TableCell , table} from "@nextui-org/react";
+import {TableRow, TableCell } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 
 import { IoShieldCheckmark } from "react-icons/io5";

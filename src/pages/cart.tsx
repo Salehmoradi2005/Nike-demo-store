@@ -1,5 +1,5 @@
-import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, User, Chip, Tooltip, getKeyValue} from "@nextui-org/react";
-import { siteConfig, SiteConfig } from "@/config/site";
+import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
+import { siteConfig } from "@/config/site";
 import {RadioGroup, Radio} from "@nextui-org/react";
 
 

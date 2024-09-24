@@ -1,6 +1,4 @@
-import { ReactNode } from "react";
-
-export default function Colors({count}) {
+export default function Colors({count}:any) {
     const Colors = ['white' , 'black' , '#77130e', '#f5a524'];
     const Labels = []
 

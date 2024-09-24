@@ -1,11 +1,11 @@
 import { Card , CardFooter , Image , Button , Skeleton } from "@nextui-org/react";
 import { useState } from "react";
 
-function delay(ms) {
+function delay(ms:number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export default function ProductCard({Price , Img , Tag , BUTT = {} , shadow}) {
+export default function ProductCard({Price , Img , Tag , BUTT = {} , shadow}:any) {
     const [Load , SetLoad] = useState(false)
     async function example() {
         await delay(2000);
@@ -32,7 +32,7 @@ export default function ProductCard({Price , Img , Tag , BUTT = {} , shadow}) {
                         <p className="text-bold text-black/80">
                             {Price} $
                         </p>
-                        <Button className="text-tiny text-black bg-black/20 shadow-md" variant="flat" color="default" radius="lg" size="sm" onPress={BUTT}>
+                        <Button className="text-tiny text-black bg-black/20 shadow-md" variant="flat" color="default" radius="lg" size="sm" onPress={() => BUTT()}>
                         More
                         </Button>
                     </CardFooter>

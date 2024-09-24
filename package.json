@@ -31,7 +31,8 @@
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "tailwind-variants": "0.1.20",
-    "tailwindcss": "3.4.3"
+    "tailwindcss": "3.4.3",
+    "vite-template": "file:"
   },
   "devDependencies": {
     "@types/react": "18.3.3",
