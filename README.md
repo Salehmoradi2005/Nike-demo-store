@@ -1,4 +1,4 @@
-#Nike demo front-end project
+# Nike demo front-end project
 
 This is React project built with NEXTUI of a demo Nike online web store and it is not official 
 You free to use it for personal use and for setting up the project follow the steps below. 
