@@ -1,6 +1,8 @@
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import {RadioGroup, Radio} from "@nextui-org/react";
+import { useTheme as useNectTheme }  from "next-themes";
+import { useTheme as useNextUITheme } from '@nextui-org/react';
 
 
 import DefaultLayout from "@/layouts/default";
@@ -104,7 +106,7 @@ export default function Cart() {
                 </div>
 
 
-                <div className="flex flex-col sm:flex-row justify-between w-full m-auto rounded-lg shadow-lg h-auto bg-teal-200 mt-5 p-12 items-center">
+                <div className="flex flex-col sm:flex-row justify-between w-full m-auto rounded-lg shadow-lg h-auto  mt-5 p-12 items-center  ">
                     <div>
                     <RadioGroup
                         label="Select your delivery type"
