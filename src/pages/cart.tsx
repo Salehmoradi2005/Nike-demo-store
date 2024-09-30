@@ -104,7 +104,7 @@ export default function Cart() {
                 </div>
 
 
-                <div className="flex flex-col sm:flex-row justify-between w-max sm:gap-64 m-auto rounded-lg shadow-lg h-auto bg-teal-200 mt-5 p-12 items-center">
+                <div className="flex flex-col sm:flex-row justify-between w-full m-auto rounded-lg shadow-lg h-auto bg-teal-200 mt-5 p-12 items-center">
                     <div>
                     <RadioGroup
                         label="Select your delivery type"
