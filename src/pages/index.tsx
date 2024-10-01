@@ -109,7 +109,7 @@ export default function IndexPage() {
           ))}
         </div>
         <section className="flex-col items-center justify-center gap-9 py-8 md:flex md:flex-row S-cont fadeInEffect">
-          <Image isZoomed src={src} width={300} shadow='md'/>
+          <Image  src={src} width={300} shadow='md'/>
           <div className="flex flex-col gap-6 container antialiased justify-items-center items-center	place-items-center	text-center	w-80 ">
             <h1 className="text-5xl font-black antialiased">JUST DO IT</h1>
             <p className="w-full sm:w-40 ">Everything you need for the biggest school day of the season.</p>

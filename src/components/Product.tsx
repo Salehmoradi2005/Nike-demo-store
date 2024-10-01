@@ -2,7 +2,7 @@ import { BiSolidStar } from "react-icons/bi"
 
 export default function Product({img , name , price , action , rating}:any) {
     return(
-        <div className='S-product-cont shadow-md S-demo-cont overflow-hidden' onClick={action}>
+        <div className='S-product-cont shadow-lg dark:shadow-[#c9c9c950] S-demo-cont overflow-hidden' onClick={action}>
             <img src={img} alt="Connection Error" width={300} height={300} className="pro-tmp-sh"/>
             <div className='relative'>
                 <h2 className='pl-2  text-md font-bold text-gray-500 w-max overflow-hidden sm:text-xl'>{name}</h2>

@@ -59,7 +59,7 @@ export const Navbar = () => {
             color="foreground"
             href="/"
           >
-            <img alt="LOGO" src={IMG} width={40} />
+            <img alt="LOGO" src={IMG} width={40} className="filter dark:invert"/>
             <p className="font-bold text-inherit">NIKE</p>
           </Link>
         </NavbarBrand>

@@ -1,5 +1,5 @@
 import {nextui} from '@nextui-org/theme'
-const CustomBlack = "#1C1C1C"
+const CustomBlack = "#060606"
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -21,8 +21,10 @@ module.exports = {
     dark: {
       colors: {
         background: CustomBlack,
-        black: CustomBlack
-      }
+        black: CustomBlack,
+        
+      },
+      
     }
   }
  })],

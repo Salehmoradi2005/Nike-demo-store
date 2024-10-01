@@ -139,7 +139,7 @@ export default function Women() {
             </ScrollCont>
           ))}
       </ScrollShadow>
-      <h1 className="text-center text-2xl font-bold mt-10 mb-5">en shoes</h1>
+      <h1 className="text-center text-2xl font-bold mt-10 mb-5">Women shoes</h1>
       <div className="flex-row  sm:flex w-full sm:gap-2 relative h-auto justify-center">
 
 

@@ -18,7 +18,7 @@ export default function ProductCard({Price , Img , Tag , BUTT = {} , shadow}:any
                 shadow={shadow}
                 isFooterBlurred
                 radius="md"
-                className="border-none relative S-temp">
+                className="border-none relative S-temp shadow-lg dark:shadow-[#c9c9c950]">
                     <Skeleton isLoaded={Load}>
                         <h1 className="absolute z-20 font-bold text-center w-full mt-2 " style={{color: '#25252595'}}>{Tag}</h1>
                     <Image

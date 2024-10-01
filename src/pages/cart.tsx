@@ -1,8 +1,6 @@
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import {RadioGroup, Radio} from "@nextui-org/react";
-import { useTheme as useNectTheme }  from "next-themes";
-import { useTheme as useNextUITheme } from '@nextui-org/react';
 
 
 import DefaultLayout from "@/layouts/default";
@@ -95,7 +93,7 @@ export default function Cart() {
                     </Table>
 
                     <Table removeWrapper aria-label="Example static collection table" className="block sm:hidden">
-                    <TableHeader>
+                    <TableHeader >
                         <TableColumn>Product</TableColumn>
                         <TableColumn>Price</TableColumn>
                     </TableHeader>
@@ -106,7 +104,7 @@ export default function Cart() {
                 </div>
 
 
-                <div className="flex flex-col sm:flex-row justify-between w-full m-auto rounded-lg shadow-lg h-auto  mt-5 p-12 items-center  ">
+                <div className="flex flex-col sm:flex-row justify-between w-full m-auto rounded-lg shadow-lg dark:shadow-[#c9c9c950]	 h-auto  mt-5 p-12 items-center  ">
                     <div>
                     <RadioGroup
                         label="Select your delivery type"
@@ -118,17 +116,17 @@ export default function Cart() {
                     </div>
                     <hr></hr>
                     <div className="sm:mt-0 mt-20">
-                        <div className="flex gap-5 justify-center">
+                        <div className="flex gap-5 justify-left">
                             <p>Total</p>
                             <p className="text-gray-300">-----------</p>
                             <p>{Math.floor(Total)} $</p>
                         </div>
-                        <div className="flex gap-5 justify-center">
+                        <div className="flex gap-5 justify-left">
                             <p>Discount</p>
                             <p className="text-gray-300">-----------</p>
                             <p>-32 $</p>
                         </div>
-                        <div className="flex gap-5 justify-center font-bold">
+                        <div className="flex gap-5 justify-left font-bold">
                             <p>Final</p>
                             <p className="text-gray-300">-----------</p>
                             <p>{Math.floor(Total) - 32} $</p>
